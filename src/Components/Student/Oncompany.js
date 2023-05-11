@@ -104,6 +104,12 @@ const Oncompany = () => {
         >
           LogOut
         </div>
+        <br />
+            <div  type="submit"
+          className="form-button" onClick={() => history.push("/deletecourior")}>
+              Delete Courior
+            </div>
+          
       </form>
     </>
   );

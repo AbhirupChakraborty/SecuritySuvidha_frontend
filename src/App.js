@@ -13,6 +13,7 @@ import Placecomm from "./Components/Student/Placecomm";
 import Jobpost from "./Components/Student/Jobpost";
 import Oncompany from "./Components/Student/Oncompany";
 import Sidebar from "./Components/Student/Sidebar";
+import Delcou from "./Components/Student/DelCou";
 function App() {
   const [user, setLoginUser] = useState({
     name: "",
@@ -63,6 +64,9 @@ function App() {
           </Route>
           <Route path="/sidebar">
             <Sidebar />
+          </Route>
+          <Route path="/deletecourior">
+            <Delcou />
           </Route>
         </switch>
       </Router>

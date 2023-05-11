@@ -64,9 +64,9 @@ const Register = ({ setLoginUser }) => {
       ></input>
       {/* <input type="drop-down" name="usertype" value={user.usertype} placeholder="User Type" onChange={ handleChange }></input> */}
       <select name="usertype" value={user.usertype} onChange={handleChange}>
-        <option value="admin">Admin</option>
+        {/* <option value="admin">Admin</option> */}
         <option value="user">Student</option>
-        <option value="company">Company</option>
+        <option value="company">Security</option>
       </select>
 
       <div className="button" onClick={register}>
