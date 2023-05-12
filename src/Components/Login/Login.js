@@ -45,7 +45,7 @@ const Login = ({ setLoginUser }) => {
   return (
     <div className="login">
       {console.log("user", user)}
-      <h1>Welcome Back :)</h1>
+      <h1>Security-Suvidha</h1>
       <input
         type="text"
         name="email"

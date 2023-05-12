@@ -7,7 +7,7 @@ const Oncompany = () => {
 
   const [user, setUser] = useState({});
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
     setUser({
       ...user,
       [name]: value,
@@ -15,15 +15,16 @@ const Oncompany = () => {
   };
 
   const submitform = () => {
-    const { companyname, email, address, status } = user;
-
-    if (companyname && email && address && status) {
+    let { cname, email, address, status } = user;
+    console.log(user)
+    if (cname && email && address && status) {
       // alert("posted")
       axios.post("http://localhost:9002/company", user).then((res) => {
         alert(res.data.message);
         console.log(res);
       });
     } else {
+      console.log(cname);
       alert("Invalid Input ");
     }
   };
@@ -31,30 +32,30 @@ const Oncompany = () => {
   return (
     <>
       <form className="form-container">
-        <h1>Add Courier Deatails</h1>
+        <h1>Add Courier Details:</h1>
         <div className="form-group">
-          <label htmlFor="companyName" className="form-label">
+          <label htmlFor="cname" className="form-label">
             Courier Name:
           </label>
           <input
             type="text"
-            name="companyname"
-            value={user.companyname}
-            placeholder="Company Name"
+            name="cname"
+            value={user.cname}
+            placeholder="Courier Name"
             onChange={handleChange}
-            id="companyName"
+            id="cname"
             className="form-input"
           />
         </div>
         <div className="form-group">
           <label htmlFor="companyemail" className="form-label">
-            Email ID:
+            Courier-ID:
           </label>
           <input
             type="text"
             name="email"
             value={user.email}
-            placeholder="Your Email ID"
+            placeholder="Courier ID"
             onChange={handleChange}
             id="email"
             className="form-input"
@@ -68,7 +69,7 @@ const Oncompany = () => {
             type="text"
             name="address"
             value={user.address}
-            placeholder="Comapany Address"
+            placeholder="Courier Address"
             onChange={handleChange}
             id="companyAddress"
             className="form-input"
@@ -88,7 +89,7 @@ const Oncompany = () => {
        
         <div className="form-group">
           <label htmlFor="companyjaf" className="form-label">
-            file:
+            Proof:
           </label>
           <input type="file" id="companyjaf" className="form-input" />
         </div>

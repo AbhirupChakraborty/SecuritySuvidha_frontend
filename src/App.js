@@ -9,7 +9,7 @@ import { useState } from "react";
 import Admin from "./Components/Admin/Admin";
 import StudentDashboard from "./Components/Student/StudentDashboard";
 import Edit from "./Components/Student/Edit";
-import Placecomm from "./Components/Student/Placecomm";
+
 import Jobpost from "./Components/Student/Jobpost";
 import Oncompany from "./Components/Student/Oncompany";
 import Sidebar from "./Components/Student/Sidebar";
@@ -50,9 +50,7 @@ function App() {
           <Route path="/studentdashboard">
             <StudentDashboard />
           </Route>
-          <Route path="/placecomm">
-            <Placecomm />
-          </Route>
+         
           <Route path="/jobpost">
             <Jobpost />
           </Route>
