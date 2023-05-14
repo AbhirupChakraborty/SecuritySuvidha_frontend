@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
 import { useHistory } from "react-router-dom";
-import StudentDashboard from "../Student/StudentDashboard";
+// import StudentDashboard from "../Student/StudentDashboard";
 import { setCookies } from "react-cookie";
 const Login = ({ setLoginUser }) => {
   const history = useHistory();
@@ -26,7 +26,7 @@ const Login = ({ setLoginUser }) => {
 
   const login = () => {
     axios.post("http://localhost:9002/login", user).then((res) => {
-      alert(res.data.message);
+      //alert(res.data.message);
       console.log(res);
       setLoginUser(res.data.user);
       if (res.data.user.usertype === "admin") {

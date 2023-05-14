@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 import "../Css/Jobpost.css";
 import Sidebar from "./Sidebar";
 
@@ -26,7 +26,7 @@ const Jobpost = () => {
             <div className="card">
               <h2>Courior : {cname}</h2>
               <h3>Address : {address}</h3>
-              <h3>Courior Owner Email ID : {email}</h3>
+              <h3>Courior ID : {email}</h3>
             </div>
           );
         })}

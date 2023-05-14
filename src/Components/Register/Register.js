@@ -19,14 +19,19 @@ const Register = ({ setLoginUser }) => {
   const register = () => {
     const { name, email, password, reenterpassword, usertype } = user;
 
-    if (name && email && password && password == reenterpassword && usertype) {
-      // alert("posted")
+    if (name && email && password && password === reenterpassword && usertype) {
       axios.post("http://localhost:9002/register", user).then((res) => {
         console.log(res);
-        alert(res.data.message);
+        if (res.data.status === "success") {
+          alert(res.data.message);
+          // Navigate to login page
+          history.push("/login");
+        } else {
+          alert(res.data.message);
+        }
       });
     } else {
-      alert("Invalid Input    ");
+      alert("Invalid Input");
     }
   };
 
@@ -62,9 +67,7 @@ const Register = ({ setLoginUser }) => {
         placeholder="Re-enter Password"
         onChange={handleChange}
       ></input>
-      {/* <input type="drop-down" name="usertype" value={user.usertype} placeholder="User Type" onChange={ handleChange }></input> */}
       <select name="usertype" value={user.usertype} onChange={handleChange}>
-        {/* <option value="admin">Admin</option> */}
         <option value="user">Student</option>
         <option value="company">Security</option>
       </select>
