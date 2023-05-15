@@ -1,6 +1,6 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     /* divide into 2 columns */
     gap: 20px;
     column-gap: 150px;

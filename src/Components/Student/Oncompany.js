@@ -116,7 +116,7 @@ const Oncompany = () => {
             className="form-button"
             onClick={() => history.push("/deletecourior")}
           >
-            Delete Courier
+            Courier entries
           </button>
           <button
             type="button"
